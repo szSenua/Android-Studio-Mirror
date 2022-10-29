@@ -119,19 +119,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             }
         });
-
-
-
-
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String item = adapterView.getItemAtPosition(i).toString();
         Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-
-
-
     }
 
     @Override
