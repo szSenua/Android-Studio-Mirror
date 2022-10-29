@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             }
         });
+<<<<<<< HEAD
 
         sb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,13 +153,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
 
 
+=======
+>>>>>>> 7e3c56fc5df447c5e79f6097250aeaabb3e1968f
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String item = adapterView.getItemAtPosition(i).toString();
         Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e3c56fc5df447c5e79f6097250aeaabb3e1968f
     }
 
     @Override
