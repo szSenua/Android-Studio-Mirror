@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LEXO</string>
+    <string name="title">Formulario</string>
+
+    <string name="app_name2">Spinner</string>
+    <string name="spn_title">Choose a language</string>
+
+    <string-array name="dlangs">
+        <item>Python</item>
+        <item>PHP</item>
+        <item>Perl</item>
+        <item>Tcl</item>
+        <item>Ruby</item>
+    </string-array>
+</resources>
