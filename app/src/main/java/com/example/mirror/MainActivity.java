@@ -2,12 +2,14 @@ package com.example.mirror;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Spinner spn2 = (Spinner) findViewById(R.id.spn2);
         spn2.setEnabled(false);
+        Intent intent = getIntent();
+        String value = intent.getStringExtra("key");
 
 
 
@@ -52,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         RadioGroup radio2 = (RadioGroup) findViewById(R.id.radioGroup2);
         EditText name1 = (EditText) findViewById(R.id.names);
         EditText name2 = (EditText) findViewById(R.id.names2);
+        Button sb = (Button) findViewById(R.id.button);
+
 
         check1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -106,11 +112,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+
+
         spn.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 spn2.setSelection(spn.getSelectedItemPosition());
+
 
             }
 
@@ -120,7 +129,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+        sb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, Info.class);
+                String edit_text = name1.getText().toString();
 
+                myIntent.putExtra("La frase: ", edit_text);
+                myIntent.putExtra("Final Fantasy: ", check1.isChecked());//Optional parameters
+                myIntent.putExtra("Anime: ", check2.isChecked());
+                myIntent.putExtra("Motos: ", check3.isChecked());
+
+                myIntent.putExtra("Apple: ", button1.isChecked());
+                myIntent.putExtra("Xiaomi: ", button2.isChecked());
+                myIntent.putExtra("Samsung: ", button3.isChecked());
+
+
+                myIntent.putExtra("Spinner_item", spn.getSelectedItem().toString());
+
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
 
 
     }
@@ -129,8 +158,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String item = adapterView.getItemAtPosition(i).toString();
         Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-
-
 
     }
 

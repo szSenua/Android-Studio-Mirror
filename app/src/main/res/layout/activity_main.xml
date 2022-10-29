@@ -101,7 +101,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="106dp"
-            android:layout_marginTop="406dp"
+            android:layout_marginTop="356dp"
             android:ems="10"
             android:enabled="false"
             android:inputType="none"
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="59dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="460dp"
+            android:layout_marginTop="400dp"
             android:backgroundTint="#D500F9"
             android:buttonTint="#D500F9"
             android:inputType="none"
@@ -125,7 +125,7 @@
             android:layout_width="108dp"
             android:layout_height="59dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="520dp"
+            android:layout_marginTop="460dp"
             android:backgroundTint="#D500F9"
             android:buttonTint="#D500F9"
             android:inputType="none"
@@ -138,7 +138,7 @@
             android:layout_width="108dp"
             android:layout_height="59dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="520dp"
             android:backgroundTint="#D500F9"
             android:buttonTint="#D500F9"
             android:inputType="none"
@@ -148,44 +148,44 @@
 
         <RadioGroup
             android:id="@+id/radioGroup2"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="186dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="460dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="400dp"
             android:layout_toEndOf="@+id/condition4"
             android:inputType="none"
-            android:textIsSelectable="false"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:textIsSelectable="false">
 
             <RadioButton
                 android:id="@+id/radioButton4"
-                android:layout_width="106dp"
+                android:layout_width="100dp"
                 android:layout_height="61dp"
                 android:layout_marginLeft="10dp"
-                android:inputType="none"
                 android:enabled="false"
-                android:textIsSelectable="false"
-                android:text="Apple" />
+                android:inputType="none"
+                android:text="Apple"
+                android:textIsSelectable="false" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
-                android:layout_width="106dp"
+                android:layout_width="100dp"
                 android:layout_height="61dp"
                 android:layout_marginLeft="10dp"
-                android:inputType="none"
                 android:enabled="false"
-                android:textIsSelectable="false"
-                android:text="Xiaomi" />
+                android:inputType="none"
+                android:text="Xiaomi"
+                android:textIsSelectable="false" />
 
             <RadioButton
                 android:id="@+id/radioButton6"
-                android:layout_width="106dp"
+                android:layout_width="100dp"
                 android:layout_height="61dp"
-                android:inputType="none"
-                android:enabled="false"
-                android:textIsSelectable="false"
                 android:layout_marginLeft="10dp"
-                android:text="Samsung" />
+                android:enabled="false"
+                android:inputType="none"
+                android:text="Samsung"
+                android:textIsSelectable="false" />
 
         </RadioGroup>
 
@@ -193,13 +193,23 @@
             android:id="@+id/spn2"
             android:layout_width="wrap_content"
             android:layout_height="61dp"
-            android:layout_marginTop="460dp"
+            android:layout_marginTop="400dp"
             android:entries="@array/dlangs"
             android:prompt="@string/spn_title"
             android:contextClickable="false"
             android:clickable="false"
             android:enabled="false"
             android:layout_toEndOf="@+id/radioGroup"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="614dp"
+            android:backgroundTint="#D500F9"
+            android:onClick="submitbuttonHandler"
+            android:text="SUBMIT" />
 
     </RelativeLayout>
 

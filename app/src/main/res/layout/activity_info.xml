@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:ems="10"
+        android:shadowColor="#00ccff"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textColor="#00ccff"
+        android:textColorLink="#8DE67F"
+        />
+
+    <CheckBox
+        android:id="@+id/condition1"
+        android:layout_width="110dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#000"
+        android:buttonTint="#D500F9"
+        android:textStyle="bold|italic"
+        android:background="#D500F9"
+        android:textColor="@color/white"
+        android:text="Final Fantasy" />
+
+    <CheckBox
+        android:id="@+id/condition2"
+        android:layout_width="110dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="159dp"
+        android:backgroundTint="#000"
+        android:buttonTint="#D500F9"
+        android:textStyle="bold|italic"
+        android:background="#D500F9"
+        android:textColor="@color/white"
+        android:text="anime" />
+
+    <CheckBox
+        android:id="@+id/condition3"
+        android:layout_width="110dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="219dp"
+        android:backgroundTint="#000"
+        android:buttonTint="#D500F9"
+        android:textStyle="bold|italic"
+        android:background="#D500F9"
+        android:textColor="@color/white"
+        android:text="motos" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="115dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="100dp"
+        android:background="#000"
+        android:layout_toEndOf="@+id/condition1"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="106dp"
+            android:layout_height="59dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#000"
+            android:buttonTint="#D500F9"
+            android:textStyle="bold|italic"
+            android:background="#D500F9"
+            android:textColor="@color/white"
+            android:text="Apple" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="106dp"
+            android:layout_height="59dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#000"
+            android:buttonTint="#D500F9"
+            android:textStyle="bold|italic"
+            android:background="#D500F9"
+            android:textColor="@color/white"
+            android:text="Xiaomi" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="106dp"
+            android:layout_height="59dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#000"
+            android:buttonTint="#D500F9"
+            android:textStyle="bold|italic"
+            android:background="#D500F9"
+            android:textColor="@color/white"
+            android:text="Samsung" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="106dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="100dp"
+        android:entries="@array/dlangs"
+        android:prompt="@string/spn_title"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:textAlignment="center"
+        android:ems="20"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:shadowColor="#00ccff"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textColor="#362E67"
+        android:textColorLink="#673AB7"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
